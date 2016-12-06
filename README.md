@@ -1,8 +1,8 @@
 # vue-router 学习笔记
 **目录**
 - 绑定一个元素
-	> <!-- 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的。 -->
-<script>
+	> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
+` <script>
 $(document).ready(function() {
     new Vue({
         el: '#app',
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 <div id="app">
   {{ message }}
-</div>
+</div> `
 - 双向绑定
 - 渲染列表
 - 处理用户输入
