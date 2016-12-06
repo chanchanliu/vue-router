@@ -182,21 +182,21 @@ $(document).ready(function() {
 	> **可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器**
 
 
-```
+*
 var MyComponent = Vue.extend({
   // 扩展选项
 })
 
-// 所有的 `MyComponent` 实例都将以预定义的扩展选项被创建
+// 所有的 MyComponent 实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
-```
+*
 
 	> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
 
-```
+*
 var data = { a: 1 }
 var vm = new Vue({
-  data: data
+	data: data
 })
 
 vm.a === data.a // -> true
@@ -208,7 +208,7 @@ data.a // -> 2
 // ... 反之亦然
 data.a = 3
 vm.a // -> 3
-```
+*
 
 	> **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
 
