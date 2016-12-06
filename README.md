@@ -1,6 +1,6 @@
 # vue-router 学习笔记
 
-**目录**
+### 目录
 
 - 绑定一个元素
 
@@ -24,7 +24,58 @@
  ```
 
 - 双向绑定
+
+	> v-model绑定input
+
+``` 
+<!-- 同时绑定message和v-modle="messsage"的两个元素，名为双向绑定。 -->
+<script>
+$(document).ready(function() {
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!'
+        }
+    })
+});
+</script>
+<div id="app">
+<!-- 因为是在Django的模板中调试，Django和Vue的{{info}}都是关键字，所以使用{% templatetag openvariable %} info {% templatetag closevariable %} 来包裹信息。这样的话被，经过渲染之后，{% templatetag openvariable %} info {% templatetag closevariable %}就变成了{{info}} -->
+    {% templatetag openvariable %}message{% templatetag closevariable %}
+    <input v-model="message">
+</div>
+ ```
+
+
 - 渲染列表
+
+	> v-for绑定列表
+
+```
+	<div id="app">
+    <div id="app">
+        <ul>
+            <li v-for="todo in todos">
+                {% templatetag openvariable %} todo.text {% templatetag closevariable %}
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- js中data的todos和li标签中v-for的in todos同一个名称，另外在{{}}中必须todo.txt,才能渲染到， -->
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue.js' },
+          { text: 'Build Something Awesome' }
+        ]
+      }
+    })      
+</script>
+```
+
 - 处理用户输入
 - 综合
 - 相应数据的绑定
