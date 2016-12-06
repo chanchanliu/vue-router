@@ -25,7 +25,7 @@
 
 - 双向绑定
 
-	> v-model绑定input
+	> **v-model绑定input**
 
 ``` 
 <!-- 同时绑定message和v-modle="messsage"的两个元素，名为双向绑定。 -->
@@ -46,10 +46,9 @@ $(document).ready(function() {
 </div>
  ```
 
-
 - 渲染列表
 
-	> v-for绑定列表
+	> **v-for绑定列表**
 
 ```
 	<div id="app">
@@ -77,7 +76,77 @@ $(document).ready(function() {
 ```
 
 - 处理用户输入
+	
+	> **v-on绑定点击事件**
+
+```
+<script>
+    $(document).click(function (){
+        new Vue({
+            el: '#app',
+            data:{
+                message:'Hello Vue.js!'
+            },
+            //在Vue里面方法必须写在methods里面，格式是functionname:function(){}
+            methods:{
+                reverseMessage:function(){
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    })
+</script>
+<div id="app">
+    <p>{% templatetag openvariable %} message {% templatetag closevariable %}</p>
+    <!-- 绑定button使用v-on，格式是v-on:触发事件名="方法名" -->
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+```
+
 - 综合
+
+```
+<script>
+    $(document).click(function (){
+        new Vue({
+            el: '#app',
+            data:{
+                newTodo:'',
+                todos:[
+                    {text:'Add some todos'}
+                ]
+            },
+            methods:{
+                addTodo:function(){
+                    var text = this.newTodo.trim()
+                    if(text){
+                        this.todos.push({text:text})
+                        this.newTodo = ''
+                    }
+                },
+                removeTodo:function(index){
+                    console.log(index)
+                    //splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+                    this.todos.splice(index, 1)
+                }
+            }
+        })
+    })
+</script>
+
+<div id="app">
+    <!-- 在input里面敲回车键就触发了addTodo方法，添加了新的li标签 -->
+    <input v-model="newTodo" v-on:keyup.enter="addTodo">
+    <ul>
+        <li v-for="todo in todos">
+            <span>{% templatetag openvariable %} todo.text {% templatetag closevariable %}</span>
+            <!-- 点击button就触发了removeTodo方法 -->
+            <button v-on:click="removeTodo($index)">x</button>
+        </li>
+    </ul>
+</div>
+```
+
 - 相应数据的绑定
 - 组件系统
 - 构造器
