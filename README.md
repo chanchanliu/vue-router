@@ -6,7 +6,7 @@
 
 - 
 
-> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
+    > 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
 
 ``` 
 <script>
@@ -29,7 +29,7 @@
 
 - 
 
-> v-model绑定input
+    > v-model绑定input
 
 ``` 
 <!-- 同时绑定message和v-modle="messsage"的两个元素，名为双向绑定。 -->
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 - 
 
-> v-for绑定列表
+    > v-for绑定列表
 
 ```
 	<div id="app">
@@ -85,7 +85,7 @@ $(document).ready(function() {
 	
 - 
 
-> v-on绑定点击事件
+    > v-on绑定点击事件
 
 ```
 <script>
@@ -204,7 +204,7 @@ $(document).ready(function() {
 -
 
 > 可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器
-每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）
+
 
 ```
 <script>
@@ -216,10 +216,10 @@ var MyComponent = Vue.extend({
 var myComponentInstance = new MyComponent()
 </script>
 ```
-
 -
 
-> 
+> 每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）
+
 
 ```
 <script>
