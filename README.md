@@ -201,14 +201,12 @@ $(document).ready(function() {
 
 
 ```
-<script>
 var MyComponent = Vue.extend({
   // 扩展选项
 })
 
 // 所有的 MyComponent 实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
-</script>
 ```
 -
 
@@ -216,7 +214,6 @@ var myComponentInstance = new MyComponent()
 
 
 ```
-<script>
 var data = { a: 1 }
 var vm = new Vue({
 	data: data
@@ -231,7 +228,6 @@ data.a // -> 2
 // ... 反之亦然
 data.a = 3
 vm.a // -> 3
-</script>
 ```
 
 -
@@ -258,9 +254,41 @@ var vm = new Vue({
 // -> "a is: 1"
 ```
 
+** 也有一些其它的钩子，在实例生命周期的不同阶段调用，如 compiled、 ready 、destroyed。钩子的 this 指向调用它的 Vue 实例。一些用户可能会问 Vue.js 是否有“控制器”的概念？答案是，没有。组件的自定义逻辑可以分割在这些钩子中。 **
 
 ### 数据绑定语法
+
+** Vue.js 的模板是基于 DOM 实现的。这意味着所有的 Vue.js 模板都是可解析的有效的 HTML，且通过一些特殊的特性做了增强。Vue 模板因而从根本上不同于基于字符串的模板，请记住这点。 **
+
 ### 插入数据值
+
+-
+
+> 数据绑定最基础的形式是文本插值，使用 “Mustache” 语法（双大括号）：
+
+```
+<span>Message: {{ msg }}</span>
+<!-- 在django中双大括号是模板的渲染语法，所以要用另一种方法实现双大括号语法。 -->
+{% templatetag openvariable %} msg {% templatetag closevariable %}
+```
+
+-
+
+> 插入HTML
+
+```
+<div>{{{ raw_html }}}</div>
+```
+
+-
+
+> 插入到HTML值的属性值里
+
+```
+<div id="item-{{ id }}"></div>
+```
+
+
 ### 绑定表达式
 ### 指令
 ### 计算属性
