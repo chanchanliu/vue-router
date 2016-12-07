@@ -151,6 +151,8 @@ $(document).ready(function() {
 
 	> **Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。**
 
+    > **v-bind 指令用于绑定 HTML 特性**
+
 ```
 <div id="example-2">
 	<!-- v-if,当greeting为true的时候，hello才显示-->
@@ -165,7 +167,6 @@ $(document).ready(function() {
 	})
 </script>
 ```
-    > v-bind 指令用于绑定 HTML 特性
 
 - 组件系统
 
