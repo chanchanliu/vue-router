@@ -165,7 +165,7 @@ $(document).ready(function() {
 	})
 </script>
 ```
-
+    > v-bind 指令用于绑定 HTML 特性
 
 - 组件系统
 
@@ -183,12 +183,14 @@ $(document).ready(function() {
 
 
 
+```
 var MyComponent = Vue.extend({
   // 扩展选项
 })
 
 // 所有的 MyComponent 实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
+```
 
 
 	> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
