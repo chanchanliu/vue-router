@@ -3,7 +3,8 @@
 ## 目录
 
 ### 绑定一个元素
-+ 引用
+
+***
 
 	> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
 
@@ -26,7 +27,9 @@
 
 ### 双向绑定
 
-	*v-model绑定input*
+***
+
+	> v-model绑定input
 
 ``` 
 <!-- 同时绑定message和v-modle="messsage"的两个元素，名为双向绑定。 -->
@@ -49,7 +52,9 @@ $(document).ready(function() {
 
 ### 渲染列表
 
-	*v-for绑定列表*
+***
+
+	> v-for绑定列表
 
 ```
 	<div id="app">
@@ -76,9 +81,11 @@ $(document).ready(function() {
 </script>
 ```
 
-### 处理用户输入*
+### 处理用户输入
 	
-	*v-on绑定点击事件*
+***
+
+    > v-on绑定点击事件
 
 ```
 <script>
