@@ -151,8 +151,6 @@ $(document).ready(function() {
 
 	> **Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。**
 
-    > **v-bind 指令用于绑定 HTML 特性**
-
 ```
 <div id="example-2">
 	<!-- v-if,当greeting为true的时候，hello才显示-->
@@ -167,6 +165,8 @@ $(document).ready(function() {
 	})
 </script>
 ```
+
+    ##### **v-bind 指令用于绑定 HTML 特性**
 
 
 - 组件系统
@@ -194,7 +194,7 @@ var myComponentInstance = new MyComponent()
 </script>
 ```
 
-	> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
+	##### **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
 
 ```
 <script>
@@ -215,7 +215,7 @@ vm.a // -> 3
 </script>
 ```
 
-	> **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
+	##### **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
 
 - 实例的生命周期
 - 数据绑定语法
