@@ -6,7 +6,7 @@
 
 - 
 
-	> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
+> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
 
 ``` 
 <script>
@@ -29,7 +29,7 @@
 
 - 
 
-	> v-model绑定input
+> v-model绑定input
 
 ``` 
 <!-- 同时绑定message和v-modle="messsage"的两个元素，名为双向绑定。 -->
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 - 
 
-	> v-for绑定列表
+> v-for绑定列表
 
 ```
 	<div id="app">
@@ -85,7 +85,7 @@ $(document).ready(function() {
 	
 - 
 
-    > v-on绑定点击事件
+> v-on绑定点击事件
 
 ```
 <script>
@@ -159,7 +159,7 @@ $(document).ready(function() {
 
 -
 
- > Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。
+> Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。
 
 ```
 <div id="example-2">
@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 -
 
-	>  组件系统是 Vue.js 另一个重要概念，因为它提供了一种抽象，让我们可以用独立可复用的小组件来构建大型应用。如果我们考虑到这点，几乎任意类型的应用的界面都可以抽象为一个组件树。
+>  组件系统是 Vue.js 另一个重要概念，因为它提供了一种抽象，让我们可以用独立可复用的小组件来构建大型应用。如果我们考虑到这点，几乎任意类型的应用的界面都可以抽象为一个组件树。
 
 ### 构造器
 	
@@ -204,14 +204,7 @@ $(document).ready(function() {
 -
 
 > 可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器
-
--
-
-> 每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）
-
--
-
-> 每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。
+每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）
 
 ```
 <script>
@@ -224,6 +217,9 @@ var myComponentInstance = new MyComponent()
 </script>
 ```
 
+-
+
+> 
 
 ```
 <script>
@@ -243,6 +239,10 @@ data.a = 3
 vm.a // -> 3
 </script>
 ```
+
+-
+
+> 每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。
 
 
 ### 实例的生命周期
