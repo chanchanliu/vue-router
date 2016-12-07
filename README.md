@@ -157,9 +157,7 @@ $(document).ready(function() {
 
 ### 相应数据的绑定
 
-1.
-
-	> Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。
+1. > Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。
 
 ```
 <div id="example-2">
@@ -176,9 +174,7 @@ $(document).ready(function() {
 </script>
 ```
 
-2.
-
-    > v-bind 指令用于绑定 HTML 特性
+2. > v-bind 指令用于绑定 HTML 特性
 
 
 ### 组件系统
