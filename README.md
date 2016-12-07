@@ -4,7 +4,7 @@
 
 ### 绑定一个元素
 
-***
+- 
 
 	> 如果new Vue不写在$(document).ready(function() {}里面的话，就必须写在最后面，这样才能保证页面元素是先于js加载的
 
@@ -27,7 +27,7 @@
 
 ### 双向绑定
 
-***
+- 
 
 	> v-model绑定input
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 ### 渲染列表
 
-***
+- 
 
 	> v-for绑定列表
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 ### 处理用户输入
 	
-***
+- 
 
     > v-on绑定点击事件
 
