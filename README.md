@@ -151,6 +151,8 @@ $(document).ready(function() {
 
 	> **Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。**
 
+    > **v-bind 指令用于绑定 HTML 特性**
+
 ```
 <div id="example-2">
 	<!-- v-if,当greeting为true的时候，hello才显示-->
@@ -166,8 +168,6 @@ $(document).ready(function() {
 </script>
 ```
 
-    > **v-bind 指令用于绑定 HTML 特性**
-
 
 - 组件系统
 
@@ -179,11 +179,9 @@ $(document).ready(function() {
 
 	> **一个 Vue 实例其实正是一个 MVVM 模式中所描述的 ViewModel - 因此在文档中经常会使用 vm 这个变量名。** 
 
-	> 在实例化 Vue 时，需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等选项。全部的选项可以在 API 文档中查看。
+	> **在实例化 Vue 时，需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等选项。全部的选项可以在 API 文档中查看。**
 
 	> **可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器**
-
-
 
 ```
 <script>
@@ -196,9 +194,7 @@ var myComponentInstance = new MyComponent()
 </script>
 ```
 
-
 	> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
-
 
 ```
 <script>
@@ -218,7 +214,6 @@ data.a = 3
 vm.a // -> 3
 </script>
 ```
-
 
 	> **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
 
