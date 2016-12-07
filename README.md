@@ -183,6 +183,10 @@ $(document).ready(function() {
 
 	> **可以扩展 Vue 构造器，从而用预定义选项创建可复用的组件构造器**
 
+    > **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
+    
+    > **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
+
 ```
 <script>
 var MyComponent = Vue.extend({
@@ -194,7 +198,6 @@ var myComponentInstance = new MyComponent()
 </script>
 ```
 
-	>> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
 
 ```
 <script>
@@ -215,7 +218,6 @@ vm.a // -> 3
 </script>
 ```
 
-	> **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
 
 - 实例的生命周期
 - 数据绑定语法
