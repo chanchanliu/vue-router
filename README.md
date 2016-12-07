@@ -151,8 +151,6 @@ $(document).ready(function() {
 
 	> **Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。**
 
-    > **v-bind 指令用于绑定 HTML 特性**
-
 ```
 <div id="example-2">
 	<!-- v-if,当greeting为true的时候，hello才显示-->
@@ -167,6 +165,9 @@ $(document).ready(function() {
 	})
 </script>
 ```
+
+    > **v-bind 指令用于绑定 HTML 特性**
+
 
 - 组件系统
 
@@ -185,18 +186,22 @@ $(document).ready(function() {
 
 
 ```
+<script>
 var MyComponent = Vue.extend({
   // 扩展选项
 })
 
 // 所有的 MyComponent 实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
+</script>
 ```
 
 
 	> **每个 Vue 实例都会代理其 data 对象里所有的属性，只有这些被代理的属性是响应的。**
 
 
+```
+<script>
 var data = { a: 1 }
 var vm = new Vue({
 	data: data
@@ -211,6 +216,8 @@ data.a // -> 2
 // ... 反之亦然
 data.a = 3
 vm.a // -> 3
+</script>
+```
 
 
 	> **每个Vue实例都有它的方法（methods）和数据（date），和绑定的元素对象（el）**
