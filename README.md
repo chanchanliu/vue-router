@@ -288,8 +288,29 @@ var vm = new Vue({
 <div id="item-{{ id }}"></div>
 ```
 
-
 ### 绑定表达式
+
+-
+
+> **JavaScript 表达式 **
+
+> 可以直接插入加减乘除、三元运算、以及javascript的函数
+
+```
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<!-- 一个限制是每个绑定只能包含单个表达式  -->
+<!-- 这是一个语句，不是一个表达式： -->
+{{ var a = 1 }}
+
+<!-- 流程控制也不可以，可改用三元表达式 -->
+{{ if (ok) { return message } }}
+```
+
 ### 指令
 ### 计算属性
 ### 绑定Class和CSS
