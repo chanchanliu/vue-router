@@ -290,11 +290,9 @@ var vm = new Vue({
 
 ### 绑定表达式
 
+##### JavaScript 表达式 
+
 -
-
-> 
-
- ##### JavaScript 表达式 
 
 > 可以直接插入加减乘除、三元运算、以及javascript的函数
 
