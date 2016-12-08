@@ -290,7 +290,7 @@ var vm = new Vue({
 
 ### 绑定表达式
 
-##### JavaScript 表达式 
+> ##### JavaScript 表达式 
 
 -
 
